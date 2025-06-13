@@ -81,6 +81,24 @@ On the login screen, these demo credentials may be pre-filled for convenience.
 
 ---
 
+## 📬 API at a Glance
+
+| Method | Path | Auth? | Body JSON (min) | Purpose |
+|--------|------|-------|-----------------|---------|
+| `POST` | `/users/login` | No | `{ "email": "userdemo@gmail.com", "password": "Demo2024!" }` | Get a JWT token. Token is returned in the **Authorization** response header. |
+| `POST` | `/register` | No | `{ "email": "...", "password": "...", "name": "..." }` | Create a new user. |
+| `POST` | `/setExpense` | Yes | `{ "amount": 25.50, "category": "Food", "date": "2025-06-13" }` | Add a single expense. |
+| `GET`  | `/getExpense` | Yes | — | List all expenses. |
+| `GET`  | `/getGroupedExpense` | Yes | — | Totals by category (for charts). |
+| `DELETE` | `/deleteExpense/{id}` | Yes | — | Delete one expense. |
+| `POST` | `/setBudget` | Yes | `{ "category": "Food", "limit": 300 }` | Create/update a budget limit. |
+| `GET`  | `/getBudgets` | Yes | — | List every budget. |
+| `DELETE` | `/deleteBudget/{id}` | Yes | — | Remove a budget. |
+| `GET`  | `/getTotal` | Yes | — | Grand total across all expenses. |
+| `GET`  | `/api/insights` | Yes | — | One AI-generated spending insight for current user. |
+
+---
+
 ## Setup & Installation
 
 ### Prerequisites
