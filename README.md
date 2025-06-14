@@ -101,6 +101,36 @@ On the login screen, these demo credentials may be pre-filled for convenience.
 
 ## Setup & Installation
 
+### Backend Setup (With Docker)
+
+### Prerequisites
+1. Docker Desktop (Mac/Win)
+
+###Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/expense-tracker.git
+2. Package the Spring Boot JAR:
+   ```bash
+   .\mvnw clean package -DskipTests
+# → target\expensetracker-0.0.1-SNAPSHOT.jar
+3. Build the Docker image:
+   ```bash
+   docker build -t expense-tracker-backend .
+4. Run the container:
+   ```bash
+   docker run --name expense-tracker -p 8080:8080 expense-tracker-backend
+
+5. 4. The backend will be available at:
+      [http://localhost:8080](http://localhost:8080)
+
+### Backend Setup (Without Docker)
+
+### Prerequisites
+1. **Java** (JDK 8 or higher)
+2. **Tesseract OCR** (already installed in windows)
+3. Maven (for Spring Boot)
+
 ### Prerequisites
 1. **Java** (JDK 8 or higher)
 2. **Node.js** and **npm/yarn**
