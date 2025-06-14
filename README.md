@@ -139,7 +139,8 @@ On the login screen, these demo credentials may be pre-filled for convenience.
 ### Backend Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/expense-tracker.git
+   git clone https://github.com/<your-username>/expense-tracker-backend.git
+   cd expense-tracker-backend
 2. Build the project using Maven:
    ```bash
    mvn clean install
